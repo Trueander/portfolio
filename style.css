@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Sansita', sans-serif;
+    text-align: center;
+    background: #A5B5A7;
+}
+
+/*SVG SECTION*/
+
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#person {
+    animation: person 2s ease-in-out infinite alternate;
+}
+
+#cube {
+    animation: cube 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes cube {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes person {
+    from{
+        transform: rotateX(10deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+
+/*NAVBAR SECTION*/
+.nav-container {
+    height: 100px;
+}
+
+.nav-container header{
+    width: 58%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav-container header nav{
+    width: 90%;
+    padding: 20px;
+    background: #e3dbd1;
+    border-radius: 0 0 15px 15px;
+}
+
+.nav-container header nav ul{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-container a{
+    position: relative;
+    text-decoration: none;
+    color: #645757;
+    font-size: 30px;
+    transition: all 300ms ease-in;
+}
+
+.nav-container a:hover{
+    color: #383636;
+}
+
+
+.nav-container a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: -8px;
+    background: #645757;;
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+    transform-origin: 0 100%;
+    
+}
+
+.nav-container a:hover::after {
+    transform: scale(1,1);
+}
+
+
+/*NAME SECTION*/
+.rectangle {
+    width: 100%;
+    height: 400px;
+    background: #e3dbd1;
+    position: absolute;
+    top: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.info {
+    width: 50%;
+    text-align: left;
+    margin-left: 4em;  
+
+}
+
+.info .name {
+    font-size: 50px;
+    color: #383636;
+}
+
+.info .description {
+    font-size: 25px;
+    color: #645757;
+    width: 50%;
+    font-weight: 100;
+}
+
+.info .button {
+    margin-top: 3.5em;
+    width: fit-content;
+    box-shadow: 1px 14px 20px 2px #888888;
+    transition: all 300ms ease-in-out ;
+}
+
+.info .button a{
+    font-size: 25px;
+    border: 1px;
+    text-decoration: none;
+    color: #E3DBD1;
+    border:1px solid #383636;
+    background: #383636;
+    padding: 8px 25px 12px 25px;
+    border-radius: 15px;
+}
+
+.info .button:hover{
+    transform: scale(1.1);
+}
+
+.empty-space {
+    width: 50%;
+}
