@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
-
+:root {
+    --main-bg-color: #a5b5a7;
+    --secondary-bg-color: #e3dbd1;
+    --main-font-color: #383636;
+    --secondary-font-color: #645757;
+}
 
 body {
     font-family: 'Sansita', sans-serif;
-    background: #e3dbd1;
+    background: var(--secondary-bg-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -26,7 +31,7 @@ body {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    background: #a5b5a7;
+    background: var(--main-bg-color);
 }
 
 .right {
@@ -47,13 +52,12 @@ body {
 header{
     display: flex;
     justify-content: space-between;
-    background: #A5B5A7;
     padding: 20px;
 }
 
 .logo {
     font-weight: bold;
-    color: #383636 ;
+    color: var(--main-font-color);
     text-decoration: none;
     font-size: 23px;
     padding: 0 4em;
@@ -76,14 +80,14 @@ header{
     display: block;
     position: relative;
     text-decoration: none;
-    color: #645757;
+    color: var(--secondary-font-color);
     font-size: 23px;
     transition: all 300ms ease-in;
     padding: 0 1em;
 }
 
 .nav-container a:hover{
-    color: #383636;
+    color: var(--main-font-color);;
 }
 
 
@@ -94,7 +98,7 @@ header{
     height: 0.175rem;
     left: 0;
     bottom: -8px;
-    background: #645757;;
+    background: var(--secondary-font-color);
     transform: scale(0,1);
     transition: transform 0.3s ease;
     transform-origin: 0 100%;
@@ -124,17 +128,17 @@ header{
 
 .info h1 {
     font-size: 4em;
-    color: #383636;
+    color: var(--main-font-color);
 }
 
 .info .description{
     margin: 1em 0;
     font-size: 1.5em;
-    color: #645757;
+    color: var(--secondary-font-color);
 }
 
 .info button {
-    box-shadow: 1px 14px 20px 2px #888888;
+    box-shadow: 1px 3px 15px 1px var(--secondary-font-color);;
     transition: all 300ms ease-in-out ;
 }
 
@@ -144,9 +148,9 @@ header{
     cursor: pointer;
     font-size: 20px;
     text-decoration: none;
-    color: #E3DBD1;
-    border:1px solid #383636;
-    background: #383636;
+    color: var(--secondary-bg-color);;
+    border:1px solid var(--main-font-color);
+    background: var(--main-font-color);;
     padding: 8px 25px 8px 25px;
     border-radius: 13px;
 }
@@ -156,10 +160,6 @@ header{
 }
 
 /*SVG SECTION*/
-
-.header-r header {
-    background: #e3dbd1;
-}
 
 .header-r header img{
     width: 40px;
@@ -189,10 +189,20 @@ svg {
     
 }
 
+#person #pants {
+    fill: var(--main-bg-color);
+}
+
+#greenBall {
+    fill: var(--secondary-bg-color);
+}
+
+
 #cube {
     animation: cube 4s infinite linear;
     transform-origin: center;
     transform-box: fill-box;
+    fill: var(--main-bg-color);
 }
 
 @keyframes cube {
