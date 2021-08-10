@@ -26,7 +26,7 @@ html{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
-    background-color: var(--main-font-color);
+    background-color: var(--secondary-font-color);
 }
 
 body {
@@ -68,60 +68,49 @@ body {
 
 /*NAVBAR SECTION*/
 
-.nav-container {
+nav {
+    position: fixed;
+    top: 0;
     width: 100%;
-}
-
-header{
+    height: 10vh;
+    background-color: transparent;
+    padding: 0 3em;
     display: flex;
     justify-content: space-between;
-    height: 10vh;
     align-items: center;
+    transition: 0.5s;
+    z-index: 1000;
 }
 
-.logo {
-    font-weight: bold;
-    color: var(--main-font-color);
-    text-decoration: none;
-    font-size: 1.5em;
-    padding: 0 4em 0 5em;
-    
-}
-
-.section-index header nav ul{
+nav ul {
+    margin: 0;
+    padding: 0 3em 0 0;
     display: flex;
-    list-style-type: none;
 }
 
-.left header nav ul{
-    padding-right: 1em;
-    display: none;
+nav ul li {
+    list-style: none;
 }
 
-.section-index header nav ul a{
+ nav ul li a{
     display: block;
     position: relative;
     text-decoration: none;
     color: var(--secondary-font-color);
-    font-size: 1.5em;
+    font-size: 1.2em;
     transition: all 300ms ease-in;
     padding: 0 1em;
 }
 
-.right a:hover{
+nav ul li a:hover{
     color: var(--secondary-font-color);
 }
 
-.right header {
-    margin-left: -20%;
-}
-
-
-.right header nav ul a::after {
+nav ul li a::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 0.175rem;
+    height: 0.15rem;
     left: 0;
     bottom: -8px;
     background: var(--secondary-font-color);
@@ -131,19 +120,19 @@ header{
     
 }
 
-.right header nav ul li:nth-child(1) a{
-    padding-left: 0;
-}
-
-.right header nav ul li:nth-child(4) a{
-    padding-right: 0;
-}
-
-.right header nav ul a:hover::after {
+nav ul li a:hover::after {
     transform: scale(1,1);
 }
 
-.nav-container .menu-btn  {
+.brand {
+    font-weight: bold;
+    color: var(--main-font-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0 0 0 3em;
+}
+
+ .menu-btn  {
     position: relative;
     display: flex;
     justify-content: center;
@@ -154,7 +143,11 @@ header{
     transition: all .5s ease-in-out;
 }
 
-.nav-container .menu-btn__burger{
+#menu-burger {
+    display: none;
+}
+
+ .menu-btn__burger{
     width: 28px;
     height: 3px;
     background-color: #fff;
@@ -163,7 +156,7 @@ header{
     transition: all .3s ease-in-out;
 }
 
-.nav-container .menu-btn__burger::before{
+ .menu-btn__burger::before{
     content: '';
     position: absolute;
     width: 33px;
@@ -175,7 +168,7 @@ header{
 }
 
 
-.nav-container .menu-btn__burger::after{
+ .menu-btn__burger::after{
     content: '';
     position: absolute;
     width: 23px;
@@ -186,11 +179,11 @@ header{
     transition: all .3s ease-in-out;
 }
 
-.nav-container .menu-btn__burger::before{
+ .menu-btn__burger::before{
     transform: translateY(-8px);
 }
 
-.nav-container .menu-btn__burger::after {
+ .menu-btn__burger::after {
     transform: translateY(8px);
 }
 
@@ -214,14 +207,12 @@ header{
 
 /*INFO SECTION*/
 .info-container {
-    height: 65%;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-items: center;
     align-items: center;
     padding: 3em;
-    
-    margin-top: 2.5em;
 }
 
 .projects-link-2 {
@@ -240,13 +231,17 @@ header{
     color: var(--main-font-color);
 }
 
-.info h2 {
+
+.info .description {
+    margin: 0.3em 0;
+    font-size: 22.5px;
     color: var(--secondary-font-color);
+    padding-right: 2em;
 }
 
-.info .description, .info p{
+.info p{
     margin: 0.3em 0;
-    font-size: 1.4em;
+    font-size: 22.5px;
     color: var(--secondary-font-color);
     padding-right: 2em;
 }
@@ -284,7 +279,7 @@ header{
     margin-left: -75%;
     /* margin-top: 9%; */
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-items: flex-start;
     align-items: center;
@@ -385,38 +380,6 @@ header{
     fill: var(--secondary-font-color);
 }
 
-
-.social-icons img:nth-child(odd){
-    
-    animation: up 2.5s linear alternate-reverse infinite;
-}
-
-.social-icons img:nth-child(even){
-    
-    animation: down 2.5s linear alternate-reverse infinite;
-}
-
-@keyframes up {
-    0%{
-        transform: translateY(20px);
-    }
-
-    100%{
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes down {
-    0%{
-        transform: translateY(-10px);
-    }
-
-    100%{
-        transform: translateY(20px);
-    }
-}
-
-
 /*PROJECTS*/
 .section-projects{
     background: var(--main-bg-color);
@@ -489,6 +452,7 @@ header{
     border-radius: 4px;
     width: 500px;
     border: 2px solid rgb(255 101 47 / 20%);
+    z-index: 2;
 }
 
 .featured-title, .projects-container {
@@ -598,20 +562,29 @@ img {
 }
 
 #paper {
-    animation: hand-move 3s infinite linear;
+    animation: hand-move 3s infinite alternate;
     transform-origin: center;
-    transform-box: fill-box;
     
 }
 
 @keyframes hand-move {
+    100%{
+        /* transform: rotateX(45deg); */
+        transform: translateY(11%);
+        opacity: 0.5;
+        z-index: -1;
+    }
 
-    from{
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    /* from{
         transform: rotateX(20deg);
     }
     to{
         transform: rotateX(-20deg);
-    }
+    } */
 }
 
 
@@ -694,6 +667,10 @@ img {
         color: var(--main-font-color);
     }
 
+    .info-container a {
+        font-size: 1em;
+    }
+
     .info .description {
         font-size: 1.2em;
     }
@@ -702,16 +679,12 @@ img {
         font-size: 1.2em;
     }
 
-    .header-r header {
-        font-size: 0.8em;
-        margin-left: -30%;
+    .brand {
+        padding-left: 3em;
     }
 
-    
-
-    .logo {
+    .brand, nav ul li a {
         font-size: 1.1em;
-        padding: 0 4em 0 7em;
     }
 
 
@@ -734,6 +707,14 @@ img {
         padding-right: 0;
     }
 
+    nav {
+        padding: 0 2em;
+    }
+
+    .brand {
+        padding: 0;
+    }
+
 
     .section-projects {
         padding: 50px 2em;
@@ -745,6 +726,7 @@ img {
 
     .projects-title h1 {
         font-size: 2.3em;
+        padding-left: 0;
     }
 
     
@@ -753,8 +735,12 @@ img {
         padding: 100px 0;
     }
 
-    .right {
+    .right, nav ul {
         display: none;
+    }
+
+    #menu-burger {
+        display: block;
     }
 
     .left {
@@ -773,6 +759,8 @@ img {
         padding: 0;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .info-container a {
@@ -796,9 +784,7 @@ img {
         display: block;
     }
 
-    .left header nav ul{
-        display: block;
-    }
+
     
     .section-quote .quote-label {
         width: 500px;
@@ -866,8 +852,12 @@ img {
         padding-top: 2em;
     }
 
-    .right {
+    .right, nav ul {
         display: none;
+    }
+
+    #menu-burger {
+        display: block;
     }
 
     .left {
@@ -879,8 +869,12 @@ img {
         padding: 2em 2em 0 2em;
     }
 
-    .logo {
-        padding-left: 2em;
+    nav {
+        padding: 0 2em;
+    }
+
+    .brand {
+        padding-left: 0;
     }
 
     .info h1 {
@@ -896,6 +890,7 @@ img {
         padding: 0;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
     }
 
     .info-container a {
@@ -922,9 +917,7 @@ img {
     .svg-mini {
         display: block;
     }
-    .left header nav ul{
-        display: block;
-    }    
+ 
 
     .techs {
         grid-template-columns: repeat(2, minmax(100px, 140px));
@@ -950,13 +943,30 @@ img {
     .contact-right p {
         font-size: 2em;
     }
+
+    .svg-mini {
+        height: 350px;
+    }
 }
 
 @media (max-width: 350px) {
 
+    
+    nav {
+        padding: 0 2em;
+    }
+
+    .brand {
+        padding-left: 0;
+    }
+
     .social-icons img {
         width: 30px;
         height: 30px;
+    }
+
+    .svg-mini {
+        height: 280px;
     }
 
     .techs {
@@ -974,6 +984,14 @@ img {
 
     .contact-container {
         flex-direction: column;
+    }
+
+    .right, nav ul {
+        display: none;
+    }
+
+    #menu-burger {
+        display: block;
     }
 
 
