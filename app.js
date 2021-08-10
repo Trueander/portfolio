@@ -21,6 +21,9 @@ let lastScrollTop = 0;
 let navbar = document.getElementById("navbar");
 
 
+
+new WOW().init();
+
 window.addEventListener("scroll", function(){
 
 
@@ -33,7 +36,7 @@ window.addEventListener("scroll", function(){
         navbar.style.top="0"
         navbar.style.boxShadow = "0 10px 30px rgb(7 20 40)";
         navbar.style.backdropFilter = "blur(10px)";
-        navbar.style.background = "#071a37bd";
+        navbar.style.background = "rgb(7 26 55 / 87%)";
     }
     lastScrollTop = scrollTop;
 
@@ -57,5 +60,3 @@ menuBtn.addEventListener('click', () => {
         menuOpen = false;
     }
 });
-
-new WOW().init();
