@@ -18,17 +18,26 @@
       <script src="wow.min.js" ></script>
     <title>Anderson Bengolea</title>
   </head>
-  <body>
+  <body id="body">
+
     <div class="container">
       <nav id="navbar">
+        <div class="menu-cover">
+          <ul >
+            <li class="link-cover"><a href="#home">HOME</a></li>
+            <li class="link-cover"><a href="#skills">SKILLS</a></li>
+            <li class="link-cover"><a href="#projects">PROJECTS</a></li>
+            <li class="link-cover"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
         <a class="brand" href="">Ander</a>
-        <ul>
+        <ul class="ul-nav">
                   <li ><a href="#home">- Home</a></li>
-                  <li ><a href="#projects">- Projects</a></li>
                   <li ><a href="#skills">- Skills</a></li>
+                  <li ><a href="#projects">- Projects</a></li>
                   <li ><a href="#contact">- Contact</a></li>
         </ul>
-        <a id="menu-burger" href="#">
+        <a id="menu-burger">
           <div class="menu-btn">
             <div class="menu-btn__burger"></div>
           </div>
@@ -517,20 +526,65 @@
               <p class="featured-desc wow fadeInUp">
                  A responsive delivery app for the customers' bussiness.
                  The admin side has data visualization of the top products and a line chart for the daily sells.
+                 <br><span class="users">Coming soon....</span>
                 </p>
             </div>
           </div>
-          <a class="projects-right wow fadeInUp" href="#"><img src="./svgs/delivery.png" alt="e-commerce"></a>
+          <a class="projects-right wow fadeInUp" href="#">
+            <img src="./svgs/delivery.png" alt="e-commerce">
+            <div class="project-techs">
+              <ul>
+                <li>Springboot</li>
+                <li>Angular</li>
+                <li>Bootstrap</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+          </a>
         </div>
         <div class="projects-container">
           <div class="projects-left">
             <div class="inner">
               <p class="subtitle wow fadeInUp">> <span>School App</span></p>
               <p class="featured-desc wow fadeInUp">A managment system for schools that can create classrooms, students, teachers,
-                 courses, grades, etc. It also allows the teacher to upload multiple files for the students.</p>
+                 courses, grades, etc. It also allows the teacher
+                  to upload multiple files for the students. 
+                  <br><span class="users">Coming soon....</span></p>
             </div>
           </div>
-          <a class="projects-right wow fadeInUp" href="#" ><img src="./svgs/school.png" alt="e-commerce"></a>
+          <a class="projects-right wow fadeInUp" href="#" >
+            <img src="./svgs/school.png" alt="e-commerce">
+            <div class="project-techs">
+              <ul>
+                <li>Springboot</li>
+                <li>Angular</li>
+                <li>Bootstrap</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <div class="projects-container">
+          <div class="projects-left">
+            <div class="inner">
+              <p class="subtitle wow fadeInUp">> <span>Teacherclass App</span></p>
+              <p class="featured-desc wow fadeInUp">A web application for teachers where they can manage 
+                their students' participation by adding or removing points to their monsters. Moreover,
+                 it has data visualization for each student's points.
+                 <br><span class="users">username: prueba@gmail.com, password: 12345678</span></p>
+            </div>
+          </div>
+          <a class="projects-right wow fadeInUp" href="https://teacherclass.herokuapp.com/" target="_blank" >
+            <img src="./svgs/TEACHERCLASS.PNG" alt="e-commerce">
+            <div class="project-techs">
+              <ul>
+                <li>Springboot</li>
+                <li>Jsp</li>
+                <li>Js</li>
+                <li>Css</li>
+              </ul>
+            </div>
+          </a>
         </div>
       </section>
       <section class="section-quote">
@@ -545,7 +599,8 @@
         <div class="contact-container">
           <div class="contact-right">
             <h1>Don't overthink it !</h1>
-            <p>Send me a message</p>
+            <p class="send"> Send me a message !</p>
+            <p class="email"><a href="mailto: bengolea.anderson@gmail.com">bengolea.anderson@gmail.com</a></p>
           </div>
           <div class="contact-left">
             <svg width="523" height="300" viewBox="0 100 523 300" fill="none" xmlns="http://www.w3.org/2000/svg">
