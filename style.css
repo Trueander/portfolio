@@ -258,6 +258,11 @@ nav ul li a:hover::after {
     display: none;
 }
 
+.description span {
+    color: var(--main-font-color);
+    font-weight: 600;
+}
+
 .info {
     display: flex;
     flex-direction: column;
