@@ -55,6 +55,18 @@ let ulCover = document.querySelectorAll(".link-cover");
 let menuOpen = false;
 
 
+let setTimeCoverOut = () => {
+    body.style.overflow = "auto";
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+    menuCover.style.animation = "circles 0.5s";
+
+    setTimeout(() => {
+        menuCover.style.display = "none";
+        
+    }, 500);
+}
+
 
 menuBtn.addEventListener('click', () => {
 
@@ -66,43 +78,25 @@ menuBtn.addEventListener('click', () => {
         menuOpen = true;
 
     }else{
-        
-        menuCover.style.animation = "circles 0.5s";
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-        body.style.overflow = "auto";
-        setTimeout(() => {
-            menuCover.style.display = "none";
-            
-        }, 500)
+        setTimeCoverOut()
+
     }
 });
 
     ulCover[0].addEventListener('click', () => {
-        menuCover.style.display = "none"
-        body.style.overflow = "auto";
-        menuBtn.classList.remove('open');
-        menuOpen = false;
+        setTimeCoverOut()
     });
     ulCover[1].addEventListener('click', () => {
-        menuCover.style.display = "none"
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-        body.style.overflow = "auto";
+
+        setTimeCoverOut()
     });
     ulCover[2].addEventListener('click', () => {
-        menuCover.style.display = "none"
-        body.style.overflow = "auto";
-        menuBtn.classList.remove('open');
-        menuOpen = false;
+
+        setTimeCoverOut()
     });
     ulCover[3].addEventListener('click', () => {
-        menuCover.style.display = "none"
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-        body.style.overflow = "auto";
+        setTimeCoverOut()
     });
-
 
 
 

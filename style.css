@@ -450,6 +450,11 @@ nav ul li a:hover::after {
     place-content: center;
 }
 
+.projects-left p span a {
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+
 .subtitle span, .skills-title span {
     border-bottom: 3px solid;
     padding-bottom: 4px;
