@@ -1131,3 +1131,25 @@ nav ul li a:hover::after {
   }
 
 
+  .ul-nav li a, .brand, .menu-btn, .link-cover a{
+    opacity: 0;
+    animation: dropIn 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: calc(var(--order) * 200ms);
+  }
+
+  @keyframes dropIn {
+    20% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+
+    30%, 100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
+
+

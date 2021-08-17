@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" defer></script> -->
     <script src="./app.js" defer></script>
 
       <link rel="stylesheet" href="animate.css">
@@ -24,22 +23,22 @@
       <nav id="navbar">
         <div class="menu-cover">
           <ul >
-            <li class="link-cover"><a href="#home">HOME</a></li>
-            <li class="link-cover"><a href="#skills">SKILLS</a></li>
-            <li class="link-cover"><a href="#projects">PROJECTS</a></li>
-            <li class="link-cover"><a href="#contact">CONTACT</a></li>
+            <li class="link-cover"><a href="#home" style="--order:1">HOME</a></li>
+            <li class="link-cover"><a href="#skills" style="--order:2">SKILLS</a></li>
+            <li class="link-cover"><a href="#projects" style="--order:3">PROJECTS</a></li>
+            <li class="link-cover"><a href="#contact" style="--order:4">CONTACT</a></li>
           </ul>
         </div>
         <a class="brand" href="">Ander</a>
         <ul class="ul-nav">
-                  <li ><a href="#home">- Home</a></li>
-                  <li ><a href="#skills">- Skills</a></li>
-                  <li ><a href="#projects">- Projects</a></li>
-                  <li ><a href="#contact">- Contact</a></li>
+                  <li ><a href="#home" style="--order:1">- Home</a></li>
+                  <li ><a href="#skills" style="--order:2">- Skills</a></li>
+                  <li ><a href="#projects" style="--order:3">- Projects</a></li>
+                  <li ><a href="#contact" style="--order:4">- Contact</a></li>
         </ul>
         <a id="menu-burger">
-          <div class="menu-btn">
-            <div class="menu-btn__burger"></div>
+          <div class="menu-btn" style="--order:1">
+            <div class="menu-btn__burger" ></div>
           </div>
         </a>
       </nav>
@@ -47,15 +46,15 @@
         <div class="left">
           <div class="info-container">
             <div class="info">
-              <p class="wow fadeInUp" data-wow-delay="0.6s">Hey there, I am</p>
-              <h1 class="wow fadeInUp" data-wow-delay="0.8s">Anderson Bengolea</h1>
+              <p class="wow fadeInUp" data-wow-delay="1.2s">Hey there, I am</p>
+              <h1 class="wow fadeInUp" data-wow-delay="1.4s">Anderson Bengolea</h1>
               
               <div class="description">
-                <p class="wow fadeInUp" data-wow-delay="1s">I'm a <span>Web Developer</span> who creates systems that fit your needs to make your life easier.</p>
+                <p class="wow fadeInUp" data-wow-delay="1.6s">I'm a <span>Web Developer</span> who creates systems that fit your needs to make your life easier.</p>
               </div>
-              <a href="#projects" class="projects-link-1 wow fadeInUp" data-wow-delay="1.2s">See my projects</a>
+              <a href="#projects" class="projects-link-1 wow fadeInUp" data-wow-delay="1.8s">See my projects</a>
             </div>
-            <div class="wow fadeInUp" data-wow-delay="1.4s">
+            <div class="wow fadeInUp" data-wow-delay="1.6s">
               <svg
               class="svg-mini " 
                 width="683"
@@ -223,6 +222,7 @@
                       d="M115.45 360.84C134.745 360.84 150.387 345.898 150.387 327.466C150.387 309.034 134.745 294.092 115.45 294.092C96.1545 294.092 80.5125 309.034 80.5125 327.466C80.5125 345.898 96.1545 360.84 115.45 360.84Z"
                       fill="#645757"
                     />
+                    <a href="https://github.com/Trueander" target="_blank">
                     <path
                       id="git-ball"
                       fill-rule="evenodd"
@@ -230,6 +230,7 @@
                       d="M115.345 294.092C106.107 294.093 97.2481 297.697 90.716 304.111C84.1838 310.524 80.5136 319.223 80.5125 328.293C80.5125 343.395 90.557 356.195 104.231 360.813C105.943 361.023 106.58 359.972 106.58 359.132V353.257C96.968 355.358 94.8324 348.643 94.8324 348.643C93.3345 344.656 90.985 343.605 90.985 343.605C87.7794 341.508 91.1946 341.508 91.1946 341.508C94.6141 341.718 96.54 345.076 96.54 345.076C99.7455 350.32 104.659 348.849 106.585 348.013C106.794 345.706 107.864 344.24 108.72 343.399C101.025 342.559 92.9065 339.622 92.9065 326.402C92.9065 322.629 94.1861 319.687 96.54 317.17C96.3216 316.54 95.0421 312.976 96.968 308.358C96.968 308.358 99.9595 307.518 106.58 311.926C109.358 311.085 112.354 310.875 115.345 310.875C118.337 310.875 121.328 311.295 124.106 311.926C130.731 307.522 133.722 308.358 133.722 308.358C135.644 312.976 134.36 316.54 134.146 317.38C136.499 319.897 137.797 323.195 137.779 326.612C137.779 339.832 129.656 342.559 121.97 343.399C123.25 344.446 124.32 346.542 124.32 349.69V359.132C124.32 359.972 124.957 361.018 126.669 360.813C133.596 358.518 139.612 354.143 143.868 348.307C148.124 342.472 150.405 335.47 150.387 328.293C150.173 309.409 134.578 294.092 115.345 294.092Z"
                       fill="#A5B5A7"
                     />
+                  </a>
                   </g>
                 </g>
                 <defs>
@@ -245,11 +246,11 @@
               </svg>
             </div>
 
-            <a href="#projects" class="projects-link-2 wow fadeInUp" data-wow-delay="1.3s">MY PROJECTS</a>
+            <a href="#projects" class="projects-link-2 wow fadeInUp" data-wow-delay="1.6s">MY PROJECTS</a>
           </div>
         </div>
         <div class="right">
-          <div class="image wow fadeInUp">
+          <div class="image wow fadeInUp" data-wow-delay="1.8s">
             <svg
               width="683"
               height="506"
@@ -421,6 +422,7 @@
                     d="M115.45 360.84C134.745 360.84 150.387 345.898 150.387 327.466C150.387 309.034 134.745 294.092 115.45 294.092C96.1545 294.092 80.5125 309.034 80.5125 327.466C80.5125 345.898 96.1545 360.84 115.45 360.84Z"
                     fill="#645757"
                   />
+                  <a href="https://github.com/Trueander" target="_blank">
                   <path
                     id="git-ball"
                     fill-rule="evenodd"
@@ -428,6 +430,7 @@
                     d="M115.345 294.092C106.107 294.093 97.2481 297.697 90.716 304.111C84.1838 310.524 80.5136 319.223 80.5125 328.293C80.5125 343.395 90.557 356.195 104.231 360.813C105.943 361.023 106.58 359.972 106.58 359.132V353.257C96.968 355.358 94.8324 348.643 94.8324 348.643C93.3345 344.656 90.985 343.605 90.985 343.605C87.7794 341.508 91.1946 341.508 91.1946 341.508C94.6141 341.718 96.54 345.076 96.54 345.076C99.7455 350.32 104.659 348.849 106.585 348.013C106.794 345.706 107.864 344.24 108.72 343.399C101.025 342.559 92.9065 339.622 92.9065 326.402C92.9065 322.629 94.1861 319.687 96.54 317.17C96.3216 316.54 95.0421 312.976 96.968 308.358C96.968 308.358 99.9595 307.518 106.58 311.926C109.358 311.085 112.354 310.875 115.345 310.875C118.337 310.875 121.328 311.295 124.106 311.926C130.731 307.522 133.722 308.358 133.722 308.358C135.644 312.976 134.36 316.54 134.146 317.38C136.499 319.897 137.797 323.195 137.779 326.612C137.779 339.832 129.656 342.559 121.97 343.399C123.25 344.446 124.32 346.542 124.32 349.69V359.132C124.32 359.972 124.957 361.018 126.669 360.813C133.596 358.518 139.612 354.143 143.868 348.307C148.124 342.472 150.405 335.47 150.387 328.293C150.173 309.409 134.578 294.092 115.345 294.092Z"
                     fill="#A5B5A7"
                   />
+                </a>
                 </g>
               </g>
               <defs>
@@ -599,11 +602,11 @@
       <section id="contact" class="section-contact-me">
         <div class="contact-container">
           <div class="contact-right">
-            <h1 class="wow fadeInUp" data-wow-delay="0.4s">Don't overthink it !</h1>
-            <p class="send wow fadeInUp" data-wow-delay="0.6s"> Send me a message !</p>
-            <p class="email wow fadeInUp" data-wow-delay="0.8s"><a href="mailto: bengolea.anderson@gmail.com">bengolea.anderson@gmail.com</a></p>
+            <h1 class="wow fadeInUp" data-wow-delay="0.2s">Don't overthink it !</h1>
+            <p class="send wow fadeInUp" data-wow-delay="0.4s"> Send me a message !</p>
+            <p class="email wow fadeInUp" data-wow-delay="0.6s"><a href="mailto: bengolea.anderson@gmail.com">bengolea.anderson@gmail.com</a></p>
           </div>
-          <div class="wow fadeInUp contact-left" data-wow-delay="1s">
+          <div class="wow fadeInUp contact-left" data-wow-delay="0.8s">
             <svg width="523" height="300" viewBox="0 100 523 300" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="mail">
               <g id="envelope">
