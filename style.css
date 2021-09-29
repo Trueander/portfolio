@@ -479,6 +479,11 @@ nav ul li a:hover::after {
     padding-left: 3em;
 }
 
+.subtitle a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
 .featured-title {
     color: var(--main-font-color);
     font-size: 1.3em;
